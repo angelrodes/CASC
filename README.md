@@ -5,13 +5,13 @@ A simple bayesian approach for a set of gaussian ages in a sequence.
 Ángel Rodés
 SUERC 2020
 
----
+## How it works
 
 Age probabilities for each unit (e.g. each morainte) are calculated as:
 ```
 P(t|T+>T>T-) ~ P(T|t) * P(t|t<T+) * P(t|t>T-)
 ```
-Where T+, T and T- are the measured data corresponding to the older,
+Where `T+`, `T` and `T-` are the measured data corresponding to the older,
 contemporary, and younger units. 
 `P(t|t<T+)` and `P(t|t>T-)` are the product of
 old-to-young and young-to-old cumulative sum of older and younger 
