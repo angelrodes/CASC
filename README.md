@@ -21,4 +21,4 @@ All distributions are scaled to fit a total probability of 1 for each
 unit.
 
 Gaussians are fitted to resulting distributions to produce symmetric ages
-for the units.
+for the units. (BGF, see https://github.com/angelrodes/CEAA)
