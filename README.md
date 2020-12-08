@@ -2,6 +2,11 @@
 
 A simple bayesian approach for a set of gaussian ages in a sequence.
 
+Ángel Rodés
+SUERC 2020
+
+---
+
 Age probabilities for each unit (e.g. each morainte) are calculated as:
 ```
 P(t|T+>T>T-) ~ P(T|t) * P(t|t<T+) * P(t|t>T-)
@@ -17,10 +22,3 @@ unit.
 
 Gaussians are fitted to resulting distributions to produce symmetric ages
 for the units.
-
-
----
-
-Angel Rodes
-
-SUERC 2020
