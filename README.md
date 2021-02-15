@@ -8,7 +8,9 @@ A simple Bayesian approach for a set of gaussian ages in a sequence.
 
 ## How it works
 
-Run CASC.m in MATLAB or Octave to compute a sequence of ages for samples listed in `data.csv`.
+* Install MATLAB or [Octave](https://www.gnu.org/software/octave/download) in your computer.
+* Download the files `CASC.m` and `BFG.m` to the same folder as your `data.csv` (e.g. `Code`>`Download ZIP` and extract all files).
+* Run CASC.m in MATLAB or Octave to compute a sequence of ages for samples listed in `data.csv`.
 
 ### Input data
 
