@@ -7,6 +7,11 @@ SUERC 2020
 
 ## How it works
 
+Input data should be organized in columns of a `.csv` file with one header line:
+```
+data.csv
+```
+
 Age probabilities for each unit (e.g. each morainte) are calculated as:
 ```
 P(t|T+>T>T-) ~ P(T|t) * P(t|t<T+) * P(t|t>T-)
