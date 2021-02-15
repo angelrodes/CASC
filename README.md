@@ -7,6 +7,8 @@ SUERC 2020
 
 ## How it works
 
+Just run CASC.m in MATLAB or Octave and select your input file.
+
 Input data should be organized in columns of a `.csv` file with one header line:
 ```
 Sample name , age , uncertainty , moraine name ,  seqential order
