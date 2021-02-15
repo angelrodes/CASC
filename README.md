@@ -1,6 +1,6 @@
 # Cosmo-Ages Sequence Calculator (CASC)
 
-A simple bayesian approach for a set of gaussian ages in a sequence.
+A simple Bayesian approach for a set of gaussian ages in a sequence.
 
 Ángel Rodés, SUERC 2020
 
@@ -8,22 +8,22 @@ A simple bayesian approach for a set of gaussian ages in a sequence.
 
 ## How it works
 
-Run CASC.m in MATLAB or Octave and select your input file.
+Run CASC.m in MATLAB or Octave to compute a sequence of ages for samples listed in `data.csv`.
 
 ### Input data
 
-Copy your data in a `.csv` file with one header line:
+Copy your data in a comma-separated file called `data.csv` with one header line:
 
 ```
 Sample name , age , uncertainty , unit name ,  seqential order
 ```
-Samples from the same unit have the same sequential order.
+Samples from the same unit have the same sequential order. In case of a gap in the sequential corder (e.g. 1, 2, 4, 5), sequential ages will be calculated also for units with no data.
 
-Avoid speces and symbols in sample names.
+Avoid spaces and symbols in sample and unit names. For example, use "Moraine-1" instead of "Moraine 1".
 
-### Under the hood
+## Under the hood
 
-Age probabilities for each unit (e.g. each morainte) are calculated as:
+Age probabilities for each unit (e.g. each moraine) are calculated as:
 ```
 P(t|T+>T>T-) ~ P(T|t) * P(t|t<T+) * P(t|t>T-)
 ```
@@ -39,7 +39,7 @@ unit.
 Gaussians are fitted to resulting distributions to produce symmetric ages
 for the units. (BGF, see https://github.com/angelrodes/CEAA)
 
-### Graphical output
+## Graphical output
 
 Two graphs are generated:
 
