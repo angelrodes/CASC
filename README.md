@@ -45,4 +45,6 @@ Two graphs are generated:
 
 * A scatter + error bar graph with the data (black) and seuqential ages (blue)
 
+![scatter plot](https://raw.githubusercontent.com/angelrodes/CASC/main/bars.png)
+
 * A plot showing the camelplots correponding to the original data (in blue) and the sequential ages (in red)
