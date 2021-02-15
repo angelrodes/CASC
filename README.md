@@ -3,7 +3,6 @@
 A simple Bayesian approach for a set of gaussian ages in a sequence.
 
 Ángel Rodés, SUERC 2020
-
 [www.angelrodes.com](www.angelrodes.com)
 
 ## How it works
