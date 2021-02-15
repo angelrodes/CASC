@@ -10,10 +10,18 @@ A simple bayesian approach for a set of gaussian ages in a sequence.
 
 Run CASC.m in MATLAB or Octave and select your input file.
 
-Input data should be organized in columns of a `.csv` file with one header line:
+### Input data
+
+Copy your data in a `.csv` file with one header line:
+
 ```
-Sample name , age , uncertainty , moraine name ,  seqential order
+Sample name , age , uncertainty , unit name ,  seqential order
 ```
+Samples from the same unit have the same sequential order.
+
+Avoid speces and symbols in sample names.
+
+### Under the hood
 
 Age probabilities for each unit (e.g. each morainte) are calculated as:
 ```
@@ -30,3 +38,11 @@ unit.
 
 Gaussians are fitted to resulting distributions to produce symmetric ages
 for the units. (BGF, see https://github.com/angelrodes/CEAA)
+
+### Graphical output
+
+Two graphs are generated:
+
+* A scatter + error bar graph with the data (black) and seuqential ages (blue)
+
+* A plot showing the camelplots correponding to the original data (in blue) and the sequential ages (in red)
