@@ -19,6 +19,9 @@ Copy your data in a comma-separated file called `data.csv` with one header line:
 ```
 Sample name , age , uncertainty , unit name ,  seqential order
 ```
+
+`data.csv` can be created in Excel and save as .csv. Make sure to use `.` as decimal separator and `,` as the delimitter.
+
 Samples from the same unit have the same sequential order. In case of a gap in the sequential corder (e.g. 1, 2, 4, 5), sequential ages will be calculated also for units with no data.
 
 Avoid spaces and symbols in sample and unit names. For example, use "Moraine-1" instead of "Moraine 1".
