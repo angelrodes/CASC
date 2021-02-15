@@ -47,7 +47,7 @@ Two graphs are generated:
 
 ![scatter plot](https://raw.githubusercontent.com/angelrodes/CASC/main/bars.png)
 
-* A plot showing the camelplots correponding to the original data (in blue) and the sequential ages (in red)
+* A plot showing the [camelplots](https://cosmognosis.wordpress.com/2011/07/25/what-is-a-camel-diagram-anyway/) correponding to the original data (in blue) and the sequential ages (in red)
 
 
 ![camel plot](https://raw.githubusercontent.com/angelrodes/CASC/main/camels.png)
