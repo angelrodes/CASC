@@ -9,7 +9,7 @@ SUERC 2020
 
 Input data should be organized in columns of a `.csv` file with one header line:
 ```
-data.csv
+Sample name , age , uncertainty , moraine name ,  seqential order
 ```
 
 Age probabilities for each unit (e.g. each morainte) are calculated as:
