@@ -56,7 +56,11 @@ Two graphs are generated:
 
 ![camel plot](https://raw.githubusercontent.com/angelrodes/CASC/main/camels.png)
 
-## Publications
+## References and publications
+
+Part of this code is based on:
+
+* **Rodés, Á.** (2020). [Cosmogenic Exposure Age Averages (CEAA v1.2)](https://doi.org/10.5281/ZENODO.4024909) [Computer software]. Zenodo. 
 
 This code has been used here:
 
