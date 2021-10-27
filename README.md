@@ -21,7 +21,7 @@ Sample name , age , uncertainty , unit name ,  sequential order
 
 `data.csv` can be created in Excel and save as .csv. Make sure to use `.` as decimal separator and `,` as the delimiter.
 
-Samples from the same unit have the same sequential order. In case of a gap in the sequential order (e.g. 1, 2, 4, 5), sequential ages will be calculated also for units with no data.
+Samples from the same unit have the same sequential order, being "1" the oldest unit. In case of a gap in the sequential order (e.g. 1, 2, 4, 5), sequential ages will be calculated also for units with no data.
 
 Avoid spaces and symbols in sample and unit names. For example, use "Moraine-1" instead of "Moraine 1".
 
