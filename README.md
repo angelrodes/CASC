@@ -55,3 +55,9 @@ Two graphs are generated:
 
 
 ![camel plot](https://raw.githubusercontent.com/angelrodes/CASC/main/camels.png)
+
+## Publications
+
+This code has been used here:
+
+* Leger, T. P. M., Hein, A. S., Bingham, R. G., **Rodés, Á.**, Fabel, D., & Smedley, R. K. (2021). [Geomorphology and 10Be chronology of the Last Glacial Maximum and deglaciation in northeastern Patagonia, 43°S-71°W.](https://doi.org/10.1016/j.quascirev.2021.107194) Quaternary Science Reviews, 272, p. 107194.
