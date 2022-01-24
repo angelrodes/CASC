@@ -25,6 +25,8 @@ Samples from the same unit have the same sequential order, being "1" the oldest 
 
 Avoid spaces and symbols in sample and unit names. For example, use "Moraine-1" instead of "Moraine 1".
 
+Example data from [Leger *et al.* (2021)](https://doi.org/10.1016/j.quascirev.2021.107194) is provided in the `data.csv` example file.
+
 ## Under the hood
 
 Age probabilities for each unit (e.g. each moraine) are calculated as:
