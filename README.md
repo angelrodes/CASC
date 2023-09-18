@@ -51,12 +51,13 @@ Two graphs are generated:
 
 * A scatter + error bar graph with the data (black) and squence ages (blue)
 
-![scatter plot](https://raw.githubusercontent.com/angelrodes/CASC/main/bars.png)
+<!-- ![scatter plot](https://raw.githubusercontent.com/angelrodes/CASC/main/bars.png) -->
+<img src="https://raw.githubusercontent.com/angelrodes/CASC/main/bars2.png" width="560">
 
-* A plot showing the [camelplots](https://cosmognosis.wordpress.com/2011/07/25/what-is-a-camel-diagram-anyway/) corresponding to the original data (in blue) and the sequential ages (in red)
+* A plot showing the [camelplots](https://cosmognosis.wordpress.com/2011/07/25/what-is-a-camel-diagram-anyway/) corresponding to the original data (individual ages in black and sum of all gaussians in blue), the sequential ages (in red), and Best Gaussian Fits (in green)
 
-
-![camel plot](https://raw.githubusercontent.com/angelrodes/CASC/main/camels.png)
+<!-- ![camel plot](https://raw.githubusercontent.com/angelrodes/CASC/main/camels2.png) -->
+<img src="https://raw.githubusercontent.com/angelrodes/CASC/main/camels2.png" width="560">
 
 ## References and publications
 
