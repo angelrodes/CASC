@@ -6,7 +6,7 @@
 % Where T+, T and T- are the measured data corresponding to the older,
 % contemporary, and younger units.
 % P(t|t<T+) and P(t|t>T-) are the product of
-% old-to-young and young-to-old cumulative sum of older and younger 
+% old-to-young and young-to-old cumulative sum of older and younger
 % age distributions from other units, scaled between 0 and 1.
 % All distributions are scaled to fit a total probability of 1 for each
 % unit.
@@ -102,6 +102,7 @@ for seq=unique(unit_order)'
         for sample=sel'
             kdei=kdei+normal_probs(ages(sample),uncertainties(sample),t);
         end
+        KDE_unscaled((seq==unique_units),:)=kdei;
         KDE((seq==unique_units),:)=kdei/sum(kdei);
         % Scaling to sum(kdei) forces the sum of each distribution = 1
     end
@@ -137,7 +138,7 @@ for seq=unique_units'
     kdei=KDE((seq==unique_units),:);
     
     skdei=kdei.*P_younger.*P_older;
-
+    
     
     if sum(skdei)>0 % ignore unit if no-solution
         SKDE((seq==unique_units),:)=skdei/sum(skdei);
@@ -195,7 +196,7 @@ for seq=sort(unique_units)'
         ' - '...
         num2str(round(maxrange*precision_multiplier)/precision_multiplier)...
         ' ]'])
-
+    
     kdei=SKDE((seq==unique_units),:);
     sel=one_sigma_selection(kdei);
     if min(t(sel))==min(t)
@@ -247,6 +248,20 @@ hold on
 
 % for each unit
 for seq=unique_units'
+    
+    % plot inidividual Gaussians
+    selsamples=(seq==unit_order);
+    if sum(selsamples)>0 % plot only if significant data
+        kdei_unscaled=KDE_unscaled((seq==unique_units),:);
+        for sample=find(selsamples)'
+            %             plot([ages(sample)-uncertainties(sample),...
+            %                 ages(sample)+uncertainties(sample)],...
+            %                 [y,y],'-k')
+            y=seq+normal_probs(ages(sample),uncertainties(sample),t)/sum(kdei_unscaled)*scale_kdes;
+            plot(x,y,'-k','LineWidth',1)
+        end
+    end
+    
     % plot initial KDEs
     x=t;
     kdei=KDE((seq==unique_units),:);
@@ -259,7 +274,7 @@ for seq=unique_units'
         plot(x.*1./sel,(seq-vertical_offset)+y.*0*1./sel,'-b')
     end
     
-    % plot final SKDEs
+    % plot final SKDEs and BGFs
     x=t;
     kdei=SKDE((seq==unique_units),:);
     if length(unique(kdei))>1 % plot only if significant data
@@ -269,6 +284,15 @@ for seq=unique_units'
         sel=one_sigma_selection(kdei);
         vertical_offset=0.1;
         plot(x.*1./sel,(seq-vertical_offset)+y.*0*1./sel,'-r')
+        
+        % plot BGF
+        y=max(seq+kdei*scale_kdes)+0.05;
+        seqpos=find(unique_units==seq);
+        if ~isnan(Bgf(seqpos))
+            plot([Bgf(seqpos)-dBgf(seqpos),Bgf(seqpos)+dBgf(seqpos)],[y,y],'-g','LineWidth',1)
+            plot(Bgf(seqpos),y,'.g')
+        end
+        
     end
     
     % plot bottom line
@@ -285,7 +309,7 @@ end
 % text(max_tplot,max(unique_units)+offset,'End')
 
 xlim([min_tplot max_tplot])
-ylim([min_seqplot-0.2 max_seqplot+0.85])
+ylim([min_seqplot-0.2 max_seqplot+0.89])
 ylabel('Sequence')
 xlabel('Age')
 if minimum_time_between_units~=0
@@ -320,7 +344,7 @@ for seq=unique_units'
         plot([Bgf(seqpos)+dBgf(seqpos),Bgf(seqpos)+dBgf(seqpos)],[y,y+1],'-b')
         plot([Bgf(seqpos),Bgf(seqpos)],[y,y+1],':b')
     end
-        
+    
     selsamples=(seq==unit_order);
     if sum(selsamples)>0 % plot only if significant data
         % plot samples
@@ -350,7 +374,7 @@ end
 % text(max_tplot,max(unique_units)+offset,'End')
 
 xlim([min_tplot max_tplot])
-ylim([min_seqplot-0.2 max_seqplot+0.85])
+ylim([min_seqplot-0.2 max_seqplot+0.99])
 ylabel('Sequence')
 xlabel('Age')
 if minimum_time_between_units~=0
